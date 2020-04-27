@@ -8,6 +8,7 @@ driver = webdriver.Chrome()
 url_file = open('urls.txt', 'r')
 
 #FILL IN THE FOLLOWING VARIABLES:
+username = ''
 password = ''
 
 for url in url_file:
@@ -18,7 +19,7 @@ for url in url_file:
   #select username box
   username_box = driver.find_element_by_name('username')
   #send username info
-  username_box.send_keys('user')
+  username_box.send_keys(username)
   #select password box
   password_box = driver.find_element_by_name('password')
   #send password info
